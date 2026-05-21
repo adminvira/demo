@@ -46,10 +46,10 @@ h1 em::after{content:'';position:absolute;inset:-8px -4px;background:#007AFF;fil
 .panel{position:relative;background:rgba(20,20,22,.6);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px;opacity:0;animation:rise .9s .35s cubic-bezier(.2,.8,.2,1) forwards}
 .panel::before{content:'';position:absolute;inset:0;border-radius:22px;padding:1px;background:linear-gradient(135deg,rgba(0,122,255,.4),transparent 40%,transparent 60%,rgba(0,122,255,.2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .field{position:relative;margin-bottom:12px}
-.field input{width:100%;padding:18px 18px 18px 48px;border:1px solid rgba(255,255,255,.06);border-radius:14px;font-size:15px;background:rgba(255,255,255,.03);color:#fff !important;-webkit-text-fill-color:#fff !important;font-family:'Geist',sans-serif;font-weight:500;outline:none;transition:.3s}
+.field input{width:100%;padding:18px 18px 18px 48px;border:1px solid rgba(255,255,255,.06);border-radius:14px;font-size:15px;background:rgba(255,255,255,.03);color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;font-family:'Geist',sans-serif;font-weight:500;outline:none;transition:.3s}
 .field input::placeholder{color:#5e5e66;-webkit-text-fill-color:#5e5e66}
 .field input:focus{border-color:#007AFF;background:rgba(0,122,255,.06);box-shadow:0 0 0 4px rgba(0,122,255,.15);animation:borderGlow 2s ease-in-out infinite}
-.field input:-webkit-autofill{-webkit-text-fill-color:#fff !important;-webkit-box-shadow:0 0 0 1000px rgba(20,20,22,.99) inset !important}
+.field input:-webkit-autofill{-webkit-text-fill-color:#ffffff !important;-webkit-box-shadow:0 0 0 1000px rgba(20,20,22,.99) inset !important}
 .fi{position:absolute;left:16px;top:18px;color:#5e5e66;pointer-events:none;transition:.3s}
 .field input:focus~.fi{color:#007AFF;transform:scale(1.1)}
 .field input.err{border-color:#ff4d4d;box-shadow:0 0 0 4px rgba(255,77,77,.15)}
@@ -66,8 +66,7 @@ h1 em::after{content:'';position:absolute;inset:-8px -4px;background:#007AFF;fil
 .btn:active:not(:disabled){transform:scale(.98)}.btn:disabled{opacity:.6;cursor:not-allowed}
 .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:shimmer 3s ease-in-out infinite}
 .btn-c{position:relative;display:inline-flex;align-items:center;gap:8px}
-.btn .arrow{transition:transform .3s}
-.btn:hover:not(:disabled) .arrow{transform:translateX(4px)}
+.btn .arrow{transition:transform .3s}.btn:hover:not(:disabled) .arrow{transform:translateX(4px)}
 .btn.ld .btn-c{opacity:0}
 .btn.ld::after{content:'';position:absolute;width:20px;height:20px;top:50%;left:50%;margin:-10px 0 0 -10px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}
 .conn{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
@@ -101,8 +100,7 @@ h1 em::after{content:'';position:absolute;inset:-8px -4px;background:#007AFF;fil
 </head>
 <body>
 <div class="aurora"><div class="a3"></div></div>
-<div class="grid"></div><div class="grain"></div>
-<div class="pts" id="pts"></div>
+<div class="grid"></div><div class="grain"></div><div class="pts" id="pts"></div>
 <div class="card">
   <div id="login">
     <div class="logo-wrap"><div class="logo"><span class="logo-dot"></span>VIRA<span style="color:#007AFF">LLC</span></div></div>
@@ -128,23 +126,21 @@ h1 em::after{content:'';position:absolute;inset:-8px -4px;background:#007AFF;fil
 </div>
 <div class="conn" id="conn"><div class="conn-in"><div class="wp"><div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="core"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div></div><div class="conn-st" id="st">Establishing secure link…</div><div class="conn-bar"></div></div></div>
 <script>
-// ══════════════════════════════════════════════
-var API = "https://script.google.com/macros/s/AKfycbwFIgEsnOHRfpSQDLQYsUiHTdxWOgYbfR93u5TyjWLUJo-g3zGDG2AwABJbEH8_ScA5XA/exec";
-// ══════════════════════════════════════════════
+// ══════════════════════════════════════════
+// ⬇️ PASTE YOUR APPS SCRIPT /exec URL ⬇️
+var API = "https://script.google.com/macros/s/AKfycbxhpyZsVzPeMrE5_Wr9_ebiAAe7D0WNKmGCNbr-URZ4rXeyLI7ojM4mesBUAIQ6H44n/exec";
+// ══════════════════════════════════════════
 
 !function(){for(var c=document.getElementById('pts'),i=0;i<14;i++){var p=document.createElement('div');p.className='pt';p.style.left=Math.random()*100+'vw';p.style.animationDelay=Math.random()*14+'s';p.style.animationDuration=10+Math.random()*8+'s';c.appendChild(p)}}();
-
 var eI=document.getElementById('inp-e'),eE=document.getElementById('fe');
 function clr(){eE.classList.remove('show');eI.classList.remove('err')}
-function err(m,h){if(h)eE.innerHTML=m;else eE.textContent=m;eE.classList.add('show');eI.classList.add('err')}
+function err(m){eE.textContent=m;eE.classList.add('show');eI.classList.add('err')}
 function chk(){var v=eI.value.trim();clr();if(!v)return false;if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){err("That doesn't look right — check the format.");return false}return true}
 eI.addEventListener('input',clr);
-
 var conn=document.getElementById('conn'),stEl=document.getElementById('st'),sT;
 var SEQ=["Establishing secure link…","Verifying credentials…","Authorizing device…","Almost there…"];
 function showC(){conn.classList.add('show');var i=0;stEl.textContent=SEQ[0];sT=setInterval(function(){i=(i+1)%SEQ.length;stEl.classList.add('fade');setTimeout(function(){stEl.textContent=SEQ[i];stEl.classList.remove('fade')},250)},1400)}
 function hideC(){conn.classList.remove('show');if(sT){clearInterval(sT);sT=null}}
-
 document.getElementById('inp-n').onkeydown=function(e){if(e.key==='Enter'){e.preventDefault();eI.focus()}};
 eI.onkeydown=function(e){if(e.key==='Enter'){e.preventDefault();go()}};
 
@@ -154,7 +150,15 @@ function go(){
   if(!ck.checked){ce.classList.add('show');return}
   var btn=document.getElementById('btn');btn.classList.add('ld');btn.disabled=true;
   var t0=Date.now();showC();
-  fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'processGuest',name:document.getElementById('inp-n').value.trim(),email:eI.value.trim()})})
+
+  // USE GET — no CORS issues, no preflight, works everywhere
+  var payload=encodeURIComponent(JSON.stringify({
+    action:'processGuest',
+    name:document.getElementById('inp-n').value.trim(),
+    email:eI.value.trim()
+  }));
+
+  fetch(API+'?data='+payload)
   .then(function(r){return r.json()})
   .then(function(d){
     if(d.error)throw new Error(d.error);
