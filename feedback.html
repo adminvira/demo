@@ -39,7 +39,7 @@ h1 em::after{content:'';position:absolute;inset:-8px -4px;background:#007AFF;fil
 .panel{position:relative;background:rgba(20,20,22,.6);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px;text-align:left;opacity:0;animation:rise .9s .35s cubic-bezier(.2,.8,.2,1) forwards}
 .panel::before{content:'';position:absolute;inset:0;border-radius:22px;padding:1px;background:linear-gradient(135deg,rgba(0,122,255,.4),transparent 40%,transparent 60%,rgba(0,122,255,.2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .fl{display:block;font-size:11px;color:#8a8a92;margin-bottom:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding-left:4px}
-textarea{width:100%;padding:16px 18px;border:1px solid rgba(255,255,255,.06);border-radius:14px;font-size:15px;background:rgba(255,255,255,.03);color:#fff !important;-webkit-text-fill-color:#fff !important;font-family:'Geist',sans-serif;line-height:1.55;outline:none;resize:vertical;min-height:130px;transition:.3s}
+textarea{width:100%;padding:16px 18px;border:1px solid rgba(255,255,255,.06);border-radius:14px;font-size:15px;background:rgba(255,255,255,.03);color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;font-family:'Geist',sans-serif;line-height:1.55;outline:none;resize:vertical;min-height:130px;transition:.3s}
 textarea::placeholder{color:#5e5e66;font-style:italic;-webkit-text-fill-color:#5e5e66}
 textarea:focus{border-color:#007AFF;background:rgba(0,122,255,.04);box-shadow:0 0 0 4px rgba(0,122,255,.15);animation:borderGlow 2s ease-in-out infinite}
 .counter{text-align:right;font-size:11px;color:#5e5e66;margin-top:8px;padding-right:4px}
@@ -52,8 +52,7 @@ textarea:focus{border-color:#007AFF;background:rgba(0,122,255,.04);box-shadow:0 
 .btn:active:not(:disabled){transform:scale(.98)}.btn:disabled{opacity:.6;cursor:not-allowed}
 .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:shimmer 3s ease-in-out infinite}
 .btn-c{position:relative;display:inline-flex;align-items:center;gap:10px}
-.btn .arrow{transition:transform .3s}
-.btn:hover:not(:disabled) .arrow{transform:translateX(4px)}
+.btn .arrow{transition:transform .3s}.btn:hover:not(:disabled) .arrow{transform:translateX(4px)}
 .btn.ld .btn-c{opacity:0}
 .btn.ld::after{content:'';position:absolute;width:20px;height:20px;top:50%;left:50%;margin:-10px 0 0 -10px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}
 .foot{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;color:#5e5e66;letter-spacing:.08em;text-transform:uppercase;opacity:0;animation:rise .9s .45s cubic-bezier(.2,.8,.2,1) forwards}
@@ -86,65 +85,50 @@ textarea:focus{border-color:#007AFF;background:rgba(0,122,255,.04);box-shadow:0 
     <a id="g-pre" class="g-link" target="_blank">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
       <div class="gt">Prefer to <strong>post publicly on Google</strong> instead?</div>
-      <span class="ga">→</span>
+      <span class="ga">&rarr;</span>
     </a>
   </div>
   <div class="foot"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>Read personally · Usually within the hour</span></div>
 </div>
 <script>
-// ══════════════════════════════════════════════
-var API = "https://script.google.com/macros/s/AKfycbwFIgEsnOHRfpSQDLQYsUiHTdxWOgYbfR93u5TyjWLUJo-g3zGDG2AwABJbEH8_ScA5XA/exec";
+// ══════════════════════════════════════════
+// ⬇️ PASTE YOUR APPS SCRIPT /exec URL ⬇️
+var API = "https://script.google.com/macros/s/AKfycbxhpyZsVzPeMrE5_Wr9_ebiAAe7D0WNKmGCNbr-URZ4rXeyLI7ojM4mesBUAIQ6H44n/exec";
 var GOOGLE_REVIEW_URL = "linkedin.com/company/viraleyemediaandanlytics/";
-// ══════════════════════════════════════════════
+// ══════════════════════════════════════════
 
-// Read email & rating from URL
-var params = new URLSearchParams(window.location.search);
-var gEmail = params.get('email') || '';
-var gRating = params.get('rating') || '';
-
-// Set Google review link
-document.getElementById('g-pre').href = GOOGLE_REVIEW_URL;
-
-// Counter
-var ta = document.getElementById('ta'), ct = document.getElementById('ct');
-ta.addEventListener('input', function(){ ct.textContent = ta.value.length; });
+var params=new URLSearchParams(window.location.search);
+var gEmail=params.get('email')||'';
+var gRating=params.get('rating')||'';
+document.getElementById('g-pre').href=GOOGLE_REVIEW_URL;
+var ta=document.getElementById('ta'),ct=document.getElementById('ct');
+ta.addEventListener('input',function(){ct.textContent=ta.value.length});
 
 function send(){
-  var text = ta.value.trim();
-  if(!text){ ta.focus(); return; }
-  var btn = document.getElementById('btn');
-  btn.classList.add('ld'); btn.disabled = true;
+  var text=ta.value.trim();
+  if(!text){ta.focus();return}
+  var btn=document.getElementById('btn');btn.classList.add('ld');btn.disabled=true;
 
-  fetch(API, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      action: 'processFeedback',
-      email: gEmail,
-      rating: gRating,
-      complaint: text
-    })
-  })
-  .then(function(r){ return r.json(); })
+  // USE GET — no CORS issues
+  var payload=encodeURIComponent(JSON.stringify({
+    action:'processFeedback',
+    email:gEmail,
+    rating:gRating,
+    complaint:text
+  }));
+
+  fetch(API+'?data='+payload)
+  .then(function(r){return r.json()})
   .then(function(d){
-    if(d.error) throw new Error(d.error);
-    document.getElementById('box').innerHTML =
-      '<div class="thanks">'
-      +'<div class="icon-wrap" style="opacity:1;animation:none"><div class="thanks-i"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div></div>'
+    if(d.error)throw new Error(d.error);
+    document.getElementById('box').innerHTML=
+      '<div class="thanks"><div class="icon-wrap" style="opacity:1;animation:none"><div class="thanks-i"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div></div>'
       +'<h1>Thank <em>you.</em></h1>'
       +'<p>Your feedback has been sent directly to our manager. We appreciate you — and we\'ll make it right.</p>'
       +'<div class="or-div" style="max-width:280px;margin:24px auto 0">or</div>'
-      +'<div style="text-align:center;margin-top:14px">'
-      +'<a href="'+GOOGLE_REVIEW_URL+'" class="thanks-g" target="_blank">'
-      +'<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>'
-      +'<span>Post on Google Reviews</span>'
-      +'<span class="arr">&rarr;</span>'
-      +'</a></div></div>';
+      +'<div style="text-align:center;margin-top:14px"><a href="'+GOOGLE_REVIEW_URL+'" class="thanks-g" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><span>Post on Google Reviews</span><span class="arr">&rarr;</span></a></div></div>';
   })
-  .catch(function(e){
-    alert("Couldn't send: " + (e.message || "Try again."));
-    btn.classList.remove('ld'); btn.disabled = false;
-  });
+  .catch(function(e){alert("Couldn't send: "+(e.message||"Try again."));btn.classList.remove('ld');btn.disabled=false});
 }
 </script>
 </body>
